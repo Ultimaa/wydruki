@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html th:replace="~{template :: index (~{::body},'Error 404 - Not found ')}">
+    <body>
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="text-center mt-4">
+                <img class="mb-4 img-error" th:src="@{/img/404.svg}" />
+                <p class="lead">This requested URL was not found on this server.</p>
+                <a href="#" th:href="@{/}">
+                    <i class="fas fa-arrow-left mr-1"></i>
+                    Return to Index
+                </a>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

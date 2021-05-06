@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html th:replace="~{template :: index (~{::body},'Error 500 - Internal Server Error')}">
+<body>
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="text-center mt-4">
+            <h1 class="display-1">500</h1>
+            <p class="lead">Internal Server Error</p>
+            <a href="#" th:href="@{/}">
+                <i class="fas fa-arrow-left mr-1"></i>
+                Return to Index
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
