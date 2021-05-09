@@ -8,16 +8,17 @@
         <version>2.5.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>pl.igorguzek</groupId>
     <artifactId>Wydruki</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <name>Wydruki</name>
-    <description>Demo project for Spring Boot</description>
+    <packaging>jar</packaging>
+
     <properties>
         <java.version>11</java.version>
     </properties>
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
