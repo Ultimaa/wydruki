@@ -20,3 +20,31 @@
         $("body").toggleClass("sb-sidenav-toggled");
     });
 })(jQuery);
+
+function generateSelect(s){
+    var min = -30,
+        max = 30,
+        select = document.getElementById(s);
+
+    for (var i = min; i<=max; i++){
+        var opt = document.createElement('option');
+        opt.value = i;
+        opt.innerHTML = i;
+        select.appendChild(opt);
+    }
+}
+
+generateSelect("temp-from");
+generateSelect("temp-to");
+
+$(function() {
+    $('input[name="datetimes"]').daterangepicker({
+        timePicker: true,
+        timePicker24Hour: true,
+        startDate: moment().startOf('hour'),
+        endDate: moment().startOf('hour').add(32, 'hour'),
+        locale: {
+            format: 'M/DD hh:mm'
+        }
+    });
+});
