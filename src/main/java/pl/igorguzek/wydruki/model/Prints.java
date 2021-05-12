@@ -4,10 +4,11 @@ public class Prints {
 
     private String plateNumber;
 
-    private int tempFrom;
-    private int tempTo;
+    private int temp;
+    private int tempRange;
+    private int timeRange;
 
-    private String dataTimeRange;
+    private String dateTimeRange;
 
     public String getPlateNumber() {
         return plateNumber;
@@ -17,37 +18,46 @@ public class Prints {
         this.plateNumber = plateNumber;
     }
 
-    public int getTempFrom() {
-        return tempFrom;
+    public int getTemp() {
+        return temp;
     }
 
-    public void setTempFrom(int tempFrom) {
-        this.tempFrom = tempFrom;
+    public void setTemp(int temp) {
+        this.temp = temp;
     }
 
-    public int getTempTo() {
-        return tempTo;
+    public int getTempRange() {
+        return tempRange;
     }
 
-    public void setTempTo(int tempTo) {
-        this.tempTo = tempTo;
+    public void setTempRange(int tempRange) {
+        this.tempRange = tempRange;
     }
 
-    public String getDataTimeRange() {
-        return dataTimeRange;
+    public int getTimeRange() {
+        return timeRange;
     }
 
-    public void setDataTimeRange(String dataTimeRange) {
-        this.dataTimeRange = dataTimeRange;
+    public void setTimeRange(int timeRange) {
+        this.timeRange = timeRange;
+    }
+
+    public String getDateTimeRange() {
+        return dateTimeRange;
+    }
+
+    public void setDateTimeRange(String dateTimeRange) {
+        this.dateTimeRange = dateTimeRange;
     }
 
     @Override
     public String toString() {
         return "Prints{" +
                 "plateNumber='" + plateNumber + '\'' +
-                ", tempFrom=" + tempFrom +
-                ", tempTo=" + tempTo +
-                ", dataTimeRange='" + dataTimeRange + '\'' +
+                ", temp=" + temp +
+                ", tempRange=" + tempRange +
+                ", timeRange=" + timeRange +
+                ", dateTimeRange='" + dateTimeRange + '\'' +
                 '}';
     }
 }

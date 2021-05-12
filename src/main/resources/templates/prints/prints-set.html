@@ -6,32 +6,6 @@
 <div class="row padding-top-form-2">
     <div class="col-md-4">
         <form method="post" class="text-center" th:action="@{/prints-set}" th:object="${Prints}">
-            <div class="form-group">
-                <label for="plates-number">Numery Rejestracyjne</label>
-                <select th:field="*{plateNumber}" class="form-control" id="plates-number">
-                    <option value="EWE 1111">EWE 1111</option>
-                    <!-- Generate plates number from database-->
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>Przedział Temperatury</label>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="temp-from">Od</label>
-                        <select th:field="*{tempFrom}" class="form-control" id="temp-from">
-                            <!-- scope from -30 to +30 in JS file -->
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="temp-to">Do</label>
-                        <select th:field="*{tempTo}" class="form-control" id="temp-to">
-                            <!-- scope from -30 to +30 in JS file -->
-                        </select>
-                    </div>
-                </div>
-            </div>
 
             <div class="form-group">
 
@@ -43,6 +17,37 @@
                 <input type="text" class="form-control text-center" name="datetimes" id="datetimes"/>
                 <!-- generate in JS file -->
             </div>
+
+            <div class="form-group">
+                <label for="plates-number">Numery Rejestracyjne</label>
+                <select th:field="*{plateNumber}" class="form-control" id="plates-number">
+                    <option value="EWE 1111">EWE 1111</option>
+                    <!-- Generate plates number from database-->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="temp">Temperatura</label>
+                        <select th:field="*{temp}" class="form-control" id="temp">
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="temp-range">Tolerancja</label>
+                        <select th:field="*{tempRange}" class="form-control" id="temp-range">
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="time-range">Przedział czasu</label>
+                <select th:field="*{timeRange}" class="form-control" id="time-range">
+                </select>
+            </div>
+
 
             <button type="submit" class="btn btn-primary">Generuj</button>
 
